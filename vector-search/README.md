@@ -5,6 +5,7 @@ This example uses embedding to create similarity vectors in a Geopackage (SQLite
 To run this example, use the following steps:
 
 * Download `data_initial.gpkg` from [Hugging Face](https://huggingface.co/datasets/marcelgeo/overture-addresses-sample).
+* Rename the file to `data.gpkg`.
 * Run `python embedding.py` to perform embedding.
 
 For similarity search, run `python qgis_search.py`. This script performs a similarity search over the data in the `embeddings` table and stores the scores in a QGIS layer.
