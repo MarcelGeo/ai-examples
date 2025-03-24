@@ -16,13 +16,14 @@ torchvision.disable_beta_transforms_warning()
 DATABASE_PATH = os.getenv("DATABASE_PATH")
 EMBEDDING_TABLE_NAME = os.getenv("EMBEDDING_TABLE_NAME")
 FROM_TABLE = os.getenv("FROM_TABLE")
+EMBEDDING_MODEl=os.getenv("EMBEDDING_MODEl")
 
 
 def main() -> None:
     """Here fun is called"""
     # Initialize the embedder
     embedder = HuggingFaceEmbeddings(
-        model_name="all-MiniLM-L6-v2",
+        model_name=EMBEDDING_MODEl,
         model_kwargs={"device": "cpu"},
         encode_kwargs={"normalize_embeddings": True},
     )
